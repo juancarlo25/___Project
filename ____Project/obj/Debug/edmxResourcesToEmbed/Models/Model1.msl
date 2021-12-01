@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AnalyticsModelStoreContainer" CdmEntityContainer="AnalyticsEntities">
+    <EntitySetMapping Name="HotelAdmins">
+      <EntityTypeMapping TypeName="AnalyticsModel.HotelAdmin">
+        <MappingFragment StoreEntitySet="HotelAdmin">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HotelGuests">
+      <EntityTypeMapping TypeName="AnalyticsModel.HotelGuest">
+        <MappingFragment StoreEntitySet="HotelGuests">
+          <ScalarProperty Name="GuestID" ColumnName="GuestID" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Roomname" ColumnName="Roomname" />
+          <ScalarProperty Name="CheckIN" ColumnName="CheckIN" />
+          <ScalarProperty Name="CheckOUT" ColumnName="CheckOUT" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HotelRooms">
+      <EntityTypeMapping TypeName="AnalyticsModel.HotelRoom">
+        <MappingFragment StoreEntitySet="HotelRooms">
+          <ScalarProperty Name="roomID" ColumnName="roomID" />
+          <ScalarProperty Name="Roomname" ColumnName="Roomname" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,66 @@
+﻿@model ____Project.Models.HotelGuest
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HotelGuest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Roomname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Roomname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckOUT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckOUT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GuestID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

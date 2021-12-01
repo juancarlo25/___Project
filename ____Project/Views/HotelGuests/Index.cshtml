@@ -1,0 +1,82 @@
+﻿@model IEnumerable<____Project.Models.HotelGuest>
+
+
+
+<link href="~/Content/BillingIndex.css" rel="stylesheet" />
+
+
+
+<div class="main-content">
+    <header>
+        <div class="search-wrapper">
+            <span class="las la-search"></span>
+            <input type="search" placeholder="Search" />
+        </div>
+
+        <div class="social-icons">
+            <span class="las la-bell"></span>
+            <span class="las la-comments"></span>
+        </div>
+    </header>
+
+
+    <main>
+        <h2 class="dash-title">Billing</h2>
+        <p class="addnew">
+            @Html.ActionLink("Add news", "Create")
+        </p>
+        <section class="recent">
+            <div class="activity-grid">
+                <div class="activity-card">
+                    <h3>
+                        Recent Activity
+                    </h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> @Html.DisplayNameFor(model => model.Firstname)</th>
+                                <th> @Html.DisplayNameFor(model => model.Lastname)</th>
+                                <th> @Html.DisplayNameFor(model => model.Roomname)</th>
+                                <th> @Html.DisplayNameFor(model => model.CheckIN)</th>
+                                <th> @Html.DisplayNameFor(model => model.CheckOUT)</th>
+                                <th> @Html.DisplayNameFor(model => model.Total)</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Firstname)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Lastname)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Roomname)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CheckIN)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CheckOUT)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Total)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.GuestID }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.GuestID })
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+</div>
+      

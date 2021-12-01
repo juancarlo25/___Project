@@ -1,0 +1,86 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --main-color: #027581;
+    --color-dark: #1D2231;
+    --text-grey: #8390A2;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.main-content {
+    position: relative;
+    margin-left: 240px;
+}
+
+main {
+    margin-top: 60px;
+    background: #f1f5f9;
+    min-height: 80vh;
+    padding: 1rem 3rem;
+}
+
+
+.dash-title {
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+
+
+.table {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.recent {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.activity-grid {
+    display: block
+}
+
+
+.activity-card {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+}
+
+    .activity-card h3 {
+        color: var(--text-grey);
+        margin: 1rem;
+    }
+
+    .activity-card table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .activity-card thead {
+        background: #efefef;
+        text-align: left;
+    }
+
+th, td {
+    font-size: .9rem;
+    padding: .4rem .4rem;
+    color: var(--color-dark);
+}
+
+td {
+    font-size: .8rem;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9faf3;
+}

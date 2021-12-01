@@ -1,0 +1,207 @@
+﻿<link href="~/Content/Analytics.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Year', 'Sales', 'Expenses'],
+            ['2013', 1000, 400],
+            ['2014', 1170, 460],
+            ['2015', 660, 1120],
+            ['2016', 1030, 540]
+        ]);
+
+        var options = {
+            title: 'Company Performance',
+            hAxis: { title: 'Year', titleTextStyle: { color: '#333' } },
+            vAxis: { minValue: 0 }
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+</script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work', 11],
+            ['Eat', 2],
+            ['Commute', 2],
+            ['Watch TV', 2],
+            ['Sleep', 7]
+        ]);
+
+        var options = {
+            title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+    }
+</script>
+<div class="main-content">
+    <header>
+        <div class="search-wrapper">
+            <span class="las la-search"></span>
+            <input type="search" placeholder="Search" />
+        </div>
+
+        <div class="social-icons">
+            <span class="las la-bell"></span>
+            <span class="las la-comments"></span>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="dash-title">Analytics</h2>
+        <div class="dash-cards">
+            <div class="card-single">
+                <div class="card-body">
+                    <span class="las la-home"></span>
+                    <div>
+                        <h5>Occupied Rooms</h5>
+                        <h4>76</h4>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    @*<a href="">View all</a>*@
+                </div>
+            </div>
+            <div class="card-single">
+                <div class="card-body">
+                    <span class="las la-money-bill-wave-alt"></span>
+                    <div>
+                        <h5>Earnings today</h5>
+                        <h4>$75,774.00</h4>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    @*<a href="">View all</a>*@
+                </div>
+            </div>
+            <div class="card-single">
+                <div class="card-body">
+                    <span class="las la-piggy-bank"></span>
+                    <div>
+                        <h5>Total income</h5>
+                        <h4>$99,758,187.00</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <section class="recent">
+            <div class="activity-grid">
+                <div class="activity-card">
+                    
+                    <table id="chart_div" style="width: 100%; height: 300px;">
+                    </table>
+                </div>
+            <div class="summary">
+                <div class="summary-card">
+                    <div class="summary-single">
+                        <div id="piechart" style="width: 500px; height: 300px;"></div>
+                        </div>
+                </div>
+            </div>
+                </div>
+        </section>
+    </main>
+
+</div>
+
+
+
+@*<section class="recent">
+    <div class="activity-grid">
+        <div class="activity-card">
+            <h3>
+                Reservations
+            </h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Guest</th>
+                        <th>Unit</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            G. Wilson
+                        </td>
+                        <td>Master Suite</td>
+
+                        <td>11/23/2021</td>
+                        <td>11/27/2021</td>
+
+                        <td>
+                            <span class="badge success">Paid</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            M. Jordan
+                        </td>
+                        <td>Double</td>
+                        <td>15 Nov, 2021</td>
+                        <td>21 Nov, 2021</td>
+
+                        <td>
+                            <span class="badge warning">Processing</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            B. Zantua
+                        </td>
+                        <td>Executive Suite</td>
+                        <td>01/01/2022</td>
+                        <td>01/31/2022</td>
+                        <td>
+                            <span class="badge success">Paid</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            S. Curry
+                        </td>
+                        <td>King's Room</td>
+                        <td>11/25/2021</td>
+                        <td>11/30/2021</td>
+
+                        <td>
+                            <span class="badge warning">Processing</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            T. Young
+                        </td>
+                        <td>Master Suite</td>
+                        <td>11/29/2021</td>
+                        <td>12/02/2021</td>
+
+                        <td>
+                            <span class="badge warning">Processing</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>*@
+
+@*</section>*@
